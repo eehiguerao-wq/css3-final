@@ -1,0 +1,226 @@
+/* =============================================
+   final.css - Proyecto Final: Crea tu sitio
+   Curso: Introduction to CSS3 - U. of Michigan
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap');
+
+/* =============================================
+   VARIABLES
+   ============================================= */
+:root {
+  --azul-oscuro:  #1b3a5c;
+  --azul-medio:   #2b7a9e;
+  --dorado:       #d4900a;
+  --fondo:        #f5f7fa;
+  --blanco:       #ffffff;
+  --texto:        #1a1a1a;
+  --pie:          #0e2030;
+}
+
+/* =============================================
+   PASO 3 — Skip link: position + :focus
+   Solo visible al enfocar (accesibilidad)
+   ============================================= */
+.skip-link {
+  position: absolute;
+  top: -120px;
+  left: 0;
+  background-color: var(--dorado);
+  color: var(--azul-oscuro);
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 15px;
+  z-index: 9999;
+  text-decoration: none;
+  border-radius: 0 0 6px 0;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* =============================================
+   body
+   ============================================= */
+body {
+  font-family: 'Source Sans 3', Helvetica, sans-serif;
+  font-size: 16px;
+  color: var(--texto);
+  background-color: var(--fondo);
+  margin: 0;
+  padding: 0;
+}
+
+/* =============================================
+   header
+   ============================================= */
+header {
+  background-color: var(--azul-oscuro);
+  padding: 24px 40px;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--blanco);
+  font-size: 2.4rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* =============================================
+   PASO 4 + 7 — nav: flex con 3 propiedades CSS
+   ============================================= */
+nav {
+  background-color: var(--azul-medio);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+  border-radius: 4px 4px 0 0;
+}
+
+/* PASO 8 — pseudo-clase :hover en nav */
+nav a:hover,
+nav a:focus {
+  color: var(--dorado);
+  border-bottom-color: var(--dorado);
+  background-color: rgba(255,255,255,0.08);
+}
+
+/* =============================================
+   main
+   ============================================= */
+main {
+  max-width: 1000px;
+  margin: 32px auto;
+  padding: 40px 48px;
+  background-color: var(--blanco);
+  border-radius: 4px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--azul-oscuro);
+  border-bottom: 2px solid var(--dorado);
+  padding-bottom: 6px;
+  margin-top: 0;
+}
+
+h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--azul-medio);
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+/* =============================================
+   PASO 5 — imágenes: box model
+   border, padding, border-radius
+   ============================================= */
+img {
+  border: 3px solid var(--azul-medio);
+  padding: 4px;
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* PASO 8 — hover en imágenes */
+img:hover {
+  transform: scale(1.03);
+  border-color: var(--dorado);
+}
+
+/* =============================================
+   PASO 6 — .grid: cuadrícula 2 columnas
+   ============================================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+  margin: 24px 0;
+}
+
+.grid img {
+  width: 100%;
+}
+
+/* PASO 9 — nth-child en .grid: 
+   cada imagen tiene border-radius diferente */
+.grid img:nth-child(1) { border-radius: 4px; }
+.grid img:nth-child(2) { border-radius: 16px; }
+.grid img:nth-child(3) { border-radius: 50%; }
+.grid img:nth-child(4) { border-radius: 24px 4px; }
+.grid img:nth-child(5) { border-radius: 8px 32px; }
+
+/* =============================================
+   PASO 7 — .flex: flexbox en imágenes
+   ============================================= */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.flex img {
+  width: 28%;
+  min-width: 150px;
+}
+
+/* PASO 9 — nth-child en .flex */
+.flex img:nth-child(odd)  { border-radius: 50%; }
+.flex img:nth-child(even) { border-radius: 12px; }
+
+/* =============================================
+   footer
+   ============================================= */
+footer {
+  background-color: var(--pie);
+  color: var(--blanco);
+  text-align: center;
+  padding: 20px 40px;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+
+footer a {
+  color: var(--dorado);
+}
+
+/* Links generales */
+a {
+  color: var(--azul-medio);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--dorado);
+  text-decoration: underline;
+}

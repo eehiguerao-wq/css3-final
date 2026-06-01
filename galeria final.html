@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería | Mi Portafolio</title>
+  <link rel="stylesheet" href="final.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <header>
+    <h1>Mi Portafolio Web</h1>
+  </header>
+
+  <nav>
+    <a href="index_final.html">Inicio</a>
+    <a href="about_final.html">Acerca de</a>
+    <a href="galeria_final.html">Galería</a>
+  </nav>
+
+  <main id="contenido-principal">
+    <h2>Galería de imágenes</h2>
+    <p>
+      Esta página contiene mi colección de imágenes organizadas con
+      CSS Grid y Flexbox. Cada imagen usa el selector nth-child para
+      tener un border-radius único.
+    </p>
+
+    <!-- Grid con 5 imágenes (paso 6, al menos una página con 5 imágenes) -->
+    <h3>Galería en cuadrícula</h3>
+    <div class="grid">
+      <img src="https://picsum.photos/seed/g1/500/350" alt="Fotografía de naturaleza 1" />
+      <img src="https://picsum.photos/seed/g2/500/350" alt="Fotografía de naturaleza 2" />
+      <img src="https://picsum.photos/seed/g3/500/350" alt="Fotografía de arquitectura" />
+      <img src="https://picsum.photos/seed/g4/500/350" alt="Fotografía de ciudad" />
+      <img src="https://picsum.photos/seed/g5/500/350" alt="Fotografía de océano" />
+    </div>
+
+    <!-- Flex con imágenes adicionales -->
+    <h3>Galería flexible</h3>
+    <div class="flex">
+      <img src="https://picsum.photos/seed/f1/300/300" alt="Imagen flex 1" />
+      <img src="https://picsum.photos/seed/f2/300/300" alt="Imagen flex 2" />
+      <img src="https://picsum.photos/seed/f3/300/300" alt="Imagen flex 3" />
+      <img src="https://picsum.photos/seed/f4/300/300" alt="Imagen flex 4" />
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Mi Portafolio Web. Proyecto Final CSS3.</p>
+  </footer>
+
+</body>
+</html>
